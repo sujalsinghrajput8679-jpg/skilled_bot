@@ -1,0 +1,903 @@
+{
+  "intents": [
+    {
+      "intent": "bmi_calculation",
+      "examples": [
+        {
+          "text": "\"Am i overweight?\""
+        },
+        {
+          "text": "\"Calculate my BMI\""
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "calorie_count",
+      "examples": [
+        {
+          "text": "\"Daily calories requirement\""
+        },
+        {
+          "text": "\"How many calories do i need?\""
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "daily_steps_goal",
+      "examples": [
+        {
+          "text": "\"Daily walking goal\""
+        },
+        {
+          "text": "\"How many steps should i walk\""
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "diet_plan",
+      "examples": [
+        {
+          "text": "\"Food plan for fitness\""
+        },
+        {
+          "text": "\"Give me a diet plan\""
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "goodbye",
+      "examples": [
+        {
+          "text": "bye"
+        },
+        {
+          "text": "see you"
+        },
+        {
+          "text": "thanks"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Greetings",
+      "examples": [
+        {
+          "text": "hello"
+        },
+        {
+          "text": "hey"
+        },
+        {
+          "text": "hii"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "muscle_gain",
+      "examples": [
+        {
+          "text": "\"Gym plan for bulking\""
+        },
+        {
+          "text": "\"How to gain muscle\""
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "muscle_gain_diet",
+      "examples": [
+        {
+          "text": "\"High protein diet?\""
+        },
+        {
+          "text": "\"What to eat for muscle gain?\""
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "set_fitness_goal",
+      "examples": [
+        {
+          "text": "\"I want to get fit in 30 days\""
+        },
+        {
+          "text": "\"Set goal for weight loss\""
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "sleep_tips",
+      "examples": [
+        {
+          "text": "\"How to improve sleep?\""
+        },
+        {
+          "text": "\"Sleep schedule help\""
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "track_progress",
+      "examples": [
+        {
+          "text": "\"I lost 2 kg\""
+        },
+        {
+          "text": "\"Track my progress\""
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "vegetarian_diet",
+      "examples": [
+        {
+          "text": "\"Vegetarian diet plan\""
+        },
+        {
+          "text": "\"Veg food for fitness\""
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "water_intake",
+      "examples": [
+        {
+          "text": "\"Daily hydration goal\""
+        },
+        {
+          "text": "\"How much water should i drink\""
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "weight_loss",
+      "examples": [
+        {
+          "text": "\"I want to lose weight\""
+        },
+        {
+          "text": "\"Weight loss workout\""
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "weight_loss_diet",
+      "examples": [
+        {
+          "text": "\"Diet for weight loss\""
+        },
+        {
+          "text": "\"What should i eat to lose weight\""
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "workout_plans",
+      "examples": [
+        {
+          "text": "Give me a workout plan"
+        },
+        {
+          "text": "\"I need an exercise routine\""
+        },
+        {
+          "text": "\"Workout for weight lose\""
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "body_parameter",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "age",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "bmi",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "calories",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "height",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "weight",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "diet_type",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "high_protein",
+          "synonyms": [
+            "muscle diet",
+            "protein rich "
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "low_carb",
+          "synonyms": [
+            "fat loss diet",
+            "keto"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "non-vegetarian",
+          "synonyms": [
+            "chicken",
+            "eggs",
+            "non veg"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "vegan",
+          "synonyms": [
+            "plant based"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "vegetarian",
+          "synonyms": [
+            "pure veg",
+            "veg"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "exercise_level",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "advanced",
+          "synonyms": [
+            "expert",
+            "heavy"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "beginner",
+          "synonyms": [
+            "new",
+            "starting"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "intermediate",
+          "synonyms": [
+            "medium"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "food_item",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "apple",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "banana",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "chicken",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "dal",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "egg",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "milk",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "oats",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "rice",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "roti",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "goal_type",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "muscle_gain",
+          "synonyms": [
+            "build muscle",
+            "bulk",
+            "gain mass"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "stamina",
+          "synonyms": [
+            "improve endurance",
+            "increase stamina"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "stay_fit",
+          "synonyms": [
+            "maintain fitness"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "weight_lose",
+          "synonyms": [
+            "lose fat",
+            "reduce weight"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "meal_type",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "breakfast",
+          "synonyms": [
+            "morning meal"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "dinner",
+          "synonyms": [
+            "night meal"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "lunch",
+          "synonyms": [
+            "noon meal"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "snacks",
+          "synonyms": [
+            "evening snacks",
+            "small meal"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "step_goal",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "10000",
+          "synonyms": [
+            "10k steps"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "5000",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "7000",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-date",
+      "values": []
+    },
+    {
+      "entity": "sys-percentage",
+      "values": []
+    },
+    {
+      "entity": "sys-time",
+      "values": []
+    },
+    {
+      "entity": "time_period",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "days",
+          "synonyms": [
+            "30"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "months",
+          "synonyms": [
+            "1"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "weeks",
+          "synonyms": [
+            "week"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "unit",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "calories",
+          "synonyms": [
+            "kcal"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "cm",
+          "synonyms": [
+            "centimeters"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "kg",
+          "synonyms": [
+            "kilograms"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "litres",
+          "synonyms": [
+            "1"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "workout_type",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "cardio",
+          "synonyms": [
+            "cycling",
+            "jogging",
+            "running"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "gym",
+          "synonyms": [
+            "bodybuilding training",
+            "gym workout"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "home",
+          "synonyms": [
+            "home workout",
+            "no equipment"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "yoga",
+          "synonyms": [
+            "meditation"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#goodbye",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_10_1763472070903",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "most people should drink 2.5 to 3 litres of water daily.  "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#water_intake",
+      "dialog_node": "node_10_1763470891333",
+      "previous_sibling": "node_7_1763470880096"
+    },
+    {
+      "type": "standard",
+      "conditions": "@food_item",
+      "dialog_node": "node_10_1763472051532",
+      "previous_sibling": "node_2_1763472040518"
+    },
+    {
+      "type": "standard",
+      "conditions": "@step_goal",
+      "dialog_node": "node_10_1763472070903",
+      "previous_sibling": "node_2_1763472062298"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "i can give you a customized routine gym or home?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#muscle_gain",
+      "dialog_node": "node_2_1763470675606",
+      "previous_sibling": "node_6_1763470525027"
+    },
+    {
+      "type": "standard",
+      "conditions": "@body_parameter",
+      "dialog_node": "node_2_1763472011679",
+      "previous_sibling": "node_6_1763472001195"
+    },
+    {
+      "type": "standard",
+      "conditions": "@time_period",
+      "dialog_node": "node_2_1763472040518",
+      "previous_sibling": "node_2_1763472011679"
+    },
+    {
+      "type": "standard",
+      "conditions": "@unit",
+      "dialog_node": "node_2_1763472062298",
+      "previous_sibling": "node_10_1763472051532"
+    },
+    {
+      "type": "standard",
+      "conditions": "@diet_type",
+      "dialog_node": "node_3_1763471970576",
+      "previous_sibling": "node_5_1763471945879"
+    },
+    {
+      "type": "standard",
+      "conditions": "@meal_type",
+      "dialog_node": "node_3_1763471979697",
+      "previous_sibling": "node_3_1763471970576"
+    },
+    {
+      "type": "standard",
+      "conditions": "#weight_loss_diet",
+      "dialog_node": "node_4_1763470813602",
+      "previous_sibling": "node_6_1763470795410"
+    },
+    {
+      "type": "standard",
+      "conditions": "@goal_type",
+      "dialog_node": "node_4_1763471178147",
+      "previous_sibling": "node_9_1763470918228"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "please share your concerns"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Greetings",
+      "dialog_node": "node_5_1763470454740",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "conditions": "@workout_type",
+      "dialog_node": "node_5_1763471945879",
+      "previous_sibling": "node_4_1763471178147"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "please tell me which kind of workout are you interested in"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#workout_plans",
+      "dialog_node": "node_6_1763470525027",
+      "previous_sibling": "node_5_1763470454740"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "please tell me : vegetarian or non vegetarian"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#diet_plan",
+      "dialog_node": "node_6_1763470795410",
+      "previous_sibling": "node_9_1763470730751"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "i can calculate your calorie requirement. "
+              },
+              {
+                "text": "please tell me your age, weight, height, and activity level."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#calorie_count",
+      "dialog_node": "node_6_1763470862566",
+      "previous_sibling": "node_8_1763470841529"
+    },
+    {
+      "type": "standard",
+      "conditions": "@exercise_level",
+      "dialog_node": "node_6_1763472001195",
+      "previous_sibling": "node_3_1763471979697"
+    },
+    {
+      "type": "standard",
+      "conditions": "#bmi_calculation",
+      "dialog_node": "node_7_1763470880096",
+      "previous_sibling": "node_6_1763470862566"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "for muscle gain , eat protein-rich foods"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#muscle_gain_diet",
+      "dialog_node": "node_8_1763470828070",
+      "previous_sibling": "node_4_1763470813602"
+    },
+    {
+      "type": "standard",
+      "conditions": "#vegetarian_diet",
+      "dialog_node": "node_8_1763470841529",
+      "previous_sibling": "node_8_1763470828070"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "do you want a home workout or gym routine"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#weight_loss",
+      "dialog_node": "node_9_1763470730751",
+      "previous_sibling": "node_2_1763470675606"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "reduce caffeine "
+              },
+              {
+                "text": "maintain phone 30 mins before bed"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#sleep_tips",
+      "dialog_node": "node_9_1763470905060",
+      "previous_sibling": "node_10_1763470891333"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "weight loss "
+              },
+              {
+                "text": "weight gain"
+              },
+              {
+                "text": "muscle gain"
+              },
+              {
+                "text": "stamina improvement "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#set_fitness_goal",
+      "dialog_node": "node_9_1763470918228",
+      "previous_sibling": "node_9_1763470905060"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I am your virtual assistant"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [],
+  "learning_opt_out": false,
+  "language": "en",
+  "description": "created for assistant 85d73ee5-be8c-4684-bf53-d6cf90e0cbee",
+  "name": "Fitness & Diet Planner Chatbot-dialog"
+}
