@@ -50,3 +50,4 @@ Future Enhancements
 * Personalized weekly fitness reports
 
 
+CREDIT - SUJAL SINGH 
